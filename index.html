@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Basic Document Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Parmar | Frontend Developer Portfolio</title>
+    
+    <meta name="description" content="Modern Frontend Developer Portfolio showcasing responsive UI, animations and web projects.">
+    <meta name="keywords" content="Krish Parmar, Frontend Developer, Portfolio, HTML, CSS, JavaScript, Web Developer">
+    <meta name="author" content="Krish Parmar">
+    
+    <!-- External Assets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Krish Parmar | Frontend Developer Portfolio">
+    <meta property="og:description" content="Modern Frontend Developer Portfolio showcasing responsive UI, animations and web projects.">
+    <meta property="og:url" content="https://krixora.github.io/Portfolio/">
+    <meta property="og:site_name" content="Krish Parmar Portfolio">
+    
+    <meta property="og:image" content="https://krixora.github.io/Portfolio/assets/images/preview.jpg">
+    <meta property="og:image:secure_url" content="https://krixora.github.io/Portfolio/assets/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Krish Parmar Portfolio Preview">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Krish Parmar | Frontend Developer Portfolio">
+    <meta name="twitter:description" content="Modern Frontend Developer Portfolio showcasing responsive UI, animations and web projects.">
+    <meta name="twitter:image" content="https://krixora.github.io/Portfolio/assets/images/preview.jpg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./assets/images/logo.jpg">
+</head>
+
+
+
+<body class="p-4 md:p-10">
+    <!-- ================= PRELOADER ================= -->
+    
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#e0e5ec] transition-opacity duration-500">
+        
+        <svg viewBox="0 0 500 120" class="w-[240px] sm:w-[320px] md:w-[400px]">
+        
+            <text x="50%" y="65%" text-anchor="middle" class="svg-text">
+            
+                KRISH
+                
+            </text>
+            
+        </svg>
+        
+    </div>
+    
+    
+    <!-- ================= HEADER ================= -->
+    
+    <header class="neu-card sticky top-4 z-50 mx-auto mb-10 px-6 py-4 rounded-[28px] flex items-center justify-between relative overflow-hidden">
+        
+        <!-- Top Gradient -->
+        <div class="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+        
+        <!-- Bottom Gradient -->
+        <div class="absolute bottom-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+        
+        <!-- Logo -->
+        <a href="#home" class="relative flex items-center hover:scale-105 transition-all duration-300 z-10">
+        
+            <img src="./assets/images/logo.jpg" alt="Krish Logo" class="h-10 w-auto object-contain">
+            
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-9 font-semibold z-10">
+            
+            <a href="#home" class="nav-link">Home</a>
+            
+            <a href="#experience" class="nav-link">Journey</a>
+            
+            <a href="#projects" class="nav-link">Projects</a>
+            
+            <a href="#contact" class="nav-link">Contact</a>
+            
+        </nav>
+        
+        <!-- Right -->
+        <div class="flex items-center gap-3 z-10">
+            
+            <button id="theme-toggle" class="neu-btn rounded-full px-5 py-3 flex items-center gap-2 font-semibold">
+            
+                <i data-lucide="moon-star" class="w-5 h-5"></i>
+                
+                <span class="hidden sm:block">Theme</span>
+                
+            </button>
+            
+            <button id="menu-btn" class="md:hidden neu-btn w-12 h-12 rounded-full flex items-center justify-center">
+            
+                <i data-lucide="menu" class="w-6 h-6"></i>
+                
+            </button>
+            
+        </div>
+        
+    </header>
+    
+    <!-- ================= OVERLAY ================= -->
+    
+    <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 invisible transition-all duration-300 z-40">
+    </div>
+    
+    <!-- ================= MOBILE SIDEBAR ================= -->
+    
+    <div id="mobile-menu" class="fixed top-[110px] right-[-320px] w-72 max-w-[85%] neu-card rounded-[24px] overflow-hidden transition-all duration-500 z-50 flex flex-col">
+        
+        <!-- Top -->
+        
+        <div class="flex items-center justify-between px-5 py-4 border-b border-gray-300/20">
+            
+            <h3 class="font-bold text-lg">
+                Menu
+            </h3>
+            
+            <button id="close-menu" class="neu-btn w-10 h-10 rounded-full flex items-center justify-center">
+            
+                <i data-lucide="x" class="w-5 h-5"></i>
+                
+            </button>
+            
+        </div>
+        
+        <!-- Links -->
+        
+        <nav class="flex flex-col gap-3 p-5">
+            
+            <a href="#home" class="menu-link neu-btn rounded-xl p-4 flex items-center gap-4">
+            
+                <i data-lucide="house"></i>
+                
+                Home
+                
+            </a>
+            
+            <a href="#experience" class="menu-link neu-btn rounded-xl p-4 flex items-center gap-4">
+            
+                <i data-lucide="map"></i>
+                
+                Journey
+                
+            </a>
+            
+            <a href="#projects" class="menu-link neu-btn rounded-xl p-4 flex items-center gap-4">
+            
+                <i data-lucide="folder-open"></i>
+                
+                Projects
+                
+            </a>
+            
+            <a href="#contact" class="menu-link neu-btn rounded-xl p-4 flex items-center gap-4">
+            
+                <i data-lucide="mail"></i>
+                
+                Contact
+                
+            </a>
+            
+        </nav>
+        
+    </div>
+    
+    
+    <!-- Add this just below your <header> -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-indigo-600 z-[9999] transition-all duration-100"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Hero Section -->
+    <section id="home" class="reveal py-16 lg:py-24">
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Left -->
+            <div class="order-2 lg:order-1">
+                
+                <span class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold tracking-wide">
+                
+                    Frontend Developer
+                    
+                </span>
+                <span class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold tracking-wide">
+                
+                    Open to Work
+                    
+                </span>
+                
+                <h1 class="mt-6 text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]">
+                    
+                    Building Modern
+                    
+                    <span class="text-indigo-600">
+                        Frontend
+                    </span>
+                    
+                    <br>
+                    
+                    Experiences.
+                    
+                </h1>
+                
+                <h2 class="mt-5 text-2xl md:text-3xl font-bold text-gray-500">
+                    
+                    Hi, I'm
+                    
+                    <span class="text-indigo-600">
+                        Krish
+                    </span>
+                    
+                    <span id="typing-text" class="border-r-2 border-indigo-600 pl-2"></span>
+                    
+                </h2>
+                
+                <p class="mt-7 max-w-xl text-gray-500 leading-8">
+                    
+                    Passionate Frontend Developer focused on creating modern,
+                    responsive and interactive web applications with clean UI,
+                    smooth animations and intuitive user experiences.
+                    
+                </p>
+                
+                
+                
+                
+                <div class="flex flex-wrap gap-4 mt-10">
+                    
+                    <a href="#projects" class="neu-btn px-8 py-3 rounded-xl font-semibold">
+                    
+                        View My Projects
+                        
+                    </a>
+                    
+                    <a href="#contact" class="px-8 py-3 rounded-xl border-2 border-indigo-500 text-indigo-600 font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300">
+                    
+                        Let's Talk
+                        
+                    </a>
+                    
+                </div>
+                
+                
+                
+                
+                
+            </div>
+            
+            
+            <!-- Right -->
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                
+                <div class="relative">
+                    
+                    <!-- Soft Glow -->
+                    <div class="absolute inset-0 bg-indigo-500/15 blur-[60px] rounded-full scale-110"></div>
+                    
+                    <!-- Outer Ring -->
+                    <div class="relative p-[5px] rounded-full bg-gradient-to-br from-indigo-500/30 via-transparent to-indigo-500/10">
+                        
+                        <!-- Profile Card -->
+                        <div class="neu-card rounded-full p-4 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
+                            
+                            <img src="./assets/images/profile.jpg" alt="Krish Parmar - Frontend Developer" loading="eager" class="w-72 h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] rounded-full object-cover select-none">
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Decorative Circle -->
+                    <div class="absolute -top-3 right-6 w-4 h-4 bg-indigo-500 rounded-full opacity-80 animate-pulse"></div>
+                    
+                    <div class="absolute bottom-10 -left-5 w-3 h-3 bg-indigo-300 rounded-full"></div>
+                    
+                    <div class="absolute top-24 -right-8 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Journey / Experience -->
+    <section id="experience" class="reveal mb-20">
+        
+        <h2 class="text-4xl font-black text-center mb-12">
+            
+            My Journey
+            
+        </h2>
+        
+        <div class="relative max-w-4xl mx-auto">
+            
+            <!-- Timeline Line -->
+            <div class="absolute left-5 top-0 h-full w-1 bg-indigo-200 rounded-full"></div>
+            
+            <!-- Item 1 -->
+            <div class="relative flex gap-8 mb-12">
+                
+                <div class="w-10 h-10 rounded-full bg-indigo-600 shadow-lg shrink-0 z-10">
+                </div>
+                
+                <div class="neu-card p-6 flex-1">
+                    
+                    <span class="text-sm text-indigo-600 font-semibold">
+                    
+                        2025 – Present
+                        
+                    </span>
+                    
+                    <h3 class="text-2xl font-bold mt-2">
+                        
+                        Frontend Development
+                        
+                    </h3>
+                    
+                    <p class="mt-3 text-gray-500 leading-7">
+                        
+                        Building modern, responsive web applications using
+                        HTML, Tailwind CSS and JavaScript while focusing on
+                        clean UI, animations and performance.
+                        
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="relative flex gap-8 mb-12">
+                
+                <div class="w-10 h-10 rounded-full bg-indigo-500 shadow-lg shrink-0 z-10">
+                </div>
+                
+                <div class="neu-card p-6 flex-1">
+                    
+                    <span class="text-sm text-indigo-600 font-semibold">
+                    
+                        Personal Projects
+                        
+                    </span>
+                    
+                    <h3 class="text-2xl font-bold mt-2">
+                        
+                        UI Experiments
+                        
+                    </h3>
+                    
+                    <p class="mt-3 text-gray-500 leading-7">
+                        
+                        Designed and developed multiple responsive projects
+                        including login pages, calculators, educational games
+                        and a professional course finder.
+                        
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="relative flex gap-8">
+                
+                <div class="w-10 h-10 rounded-full bg-indigo-400 shadow-lg shrink-0 z-10">
+                </div>
+                
+                <div class="neu-card p-6 flex-1">
+                    
+                    <span class="text-sm text-indigo-600 font-semibold">
+                    
+                        Continuous Learning
+                        
+                    </span>
+                    
+                    <h3 class="text-2xl font-bold mt-2">
+                        
+                        Always Improving
+                        
+                    </h3>
+                    
+                    <p class="mt-3 text-gray-500 leading-7">
+                        
+                        Continuously learning new technologies, improving
+                        problem-solving skills and building high-quality
+                        frontend experiences.
+                        
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    <!-- Featured Projects -->
+    <section id="projects" class="reveal mb-20">
+        
+        <div class="text-center mb-14">
+            
+            <span class="text-indigo-600 font-semibold uppercase tracking-[0.25em] text-sm">
+                Portfolio
+            </span>
+            
+            <h2 class="text-5xl font-black mt-3">
+                Featured Projects
+            </h2>
+            
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto leading-8">
+                A collection of responsive web applications and interactive
+                user experiences built with modern frontend technologies.
+            </p>
+            
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            
+            <!-- project cards here -->
+            
+            
+            
+            <!-- Project 1 -->
+            <div class="group neu-card p-6 rounded-[28px] hover:scale-[1.03] transition-all duration-500 flex flex-col justify-between overflow-hidden">
+                
+                <div>
+                    
+                    <!-- Project Image -->
+                    <div class="relative overflow-hidden rounded-2xl mb-5">
+                        
+                        <img src="./assets/images/project-1.jpg" alt="Free Professional Course Finder" loading="lazy" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Project Number -->
+                        <span class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-indigo-600">
+                            01
+                        </span>
+                        
+                    </div>
+                    
+                    
+                    <!-- Category -->
+                    
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-500">
+                        Web Application
+                    </span>
+                    
+                    
+                    <!-- Title -->
+                    
+                    <h4 class="mt-3 text-2xl font-black">
+                        Free Professional Course Finder
+                    </h4>
+                    
+                    
+                    <!-- Description -->
+                    
+                    <p class="mt-3 text-sm text-gray-500 leading-7">
+                        A responsive web application that helps users discover free professional
+                        courses from trusted learning platforms through a clean, modern and intuitive interface.
+                    </p>
+                    
+                    
+                </div>
+                
+                
+                
+                <!-- Tech Stack -->
+                
+                <div class="flex flex-wrap gap-2 mt-6">
+                    
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">
+                        HTML
+                    </span>
+                    
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">
+                        Tailwind CSS
+                    </span>
+                    
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">
+                        JavaScript
+                    </span>
+                    
+                </div>
+                
+                
+                
+                <!-- Buttons -->
+                
+                <div class="flex gap-3 mt-7">
+                    
+                    <a href="https://rad-dolphin-affc57.netlify.app/" target="_blank" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold hover:text-indigo-600 transition">
+                    
+                        Live Demo ↗
+                        
+                    </a>
+                    
+                    
+                    <a href="#" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold opacity-70">
+                    
+                        Source Code
+                        
+                    </a>
+                    
+                </div>
+                
+                
+            </div>
+            
+            
+            
+            <!-- Project 2 -->
+            <div class="group neu-card p-6 rounded-[28px] hover:scale-[1.03] transition-all duration-500 flex flex-col justify-between overflow-hidden">
+                
+                <div>
+                    <!-- Project Image -->
+                    <div class="relative overflow-hidden rounded-2xl mb-5">
+                        <img src="./assets/images/project-2.jpg" alt="Modern Login Page UI" loading="lazy" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Project Number -->
+                        <span class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-indigo-600">
+                            02
+                        </span>
+                    </div>
+                    
+                    <!-- Category -->
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-500">
+                        UI / Frontend Design
+                    </span>
+                    
+                    <!-- Title -->
+                    <h4 class="mt-3 text-2xl font-black">
+                        Modern Login Page UI
+                    </h4>
+                    
+                    <!-- Description -->
+                    <p class="mt-3 text-sm text-gray-500 leading-7">
+                        A modern and responsive login page featuring a clean user interface,
+                        smooth interactions and a user-friendly authentication layout.
+                    </p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">HTML</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">JavaScript</span>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex gap-3 mt-7">
+                    <a href="https://meow.srcnexus.app/Login-page-" target="_blank" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold hover:text-indigo-600 transition">
+                        Live Demo ↗
+                    </a>
+                    
+                    <a href="#" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold opacity-70">
+                        Source Code
+                    </a>
+                </div>
+                
+            </div>
+            
+            
+            
+            <!-- Project 3 -->
+            <div class="group neu-card p-6 rounded-[28px] hover:scale-[1.03] transition-all duration-500 flex flex-col justify-between overflow-hidden">
+                
+                <div>
+                    <!-- Project Image -->
+                    <div class="relative overflow-hidden rounded-2xl mb-5">
+                        <img src="./assets/images/project-3.jpg" alt="Interactive Math Game" loading="lazy" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Project Number -->
+                        <span class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-indigo-600">
+                            03
+                        </span>
+                    </div>
+                    
+                    <!-- Category -->
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-500">
+                        Educational Game
+                    </span>
+                    
+                    <!-- Title -->
+                    <h4 class="mt-3 text-2xl font-black">
+                        Interactive Math Game
+                    </h4>
+                    
+                    <!-- Description -->
+                    <p class="mt-3 text-sm text-gray-500 leading-7">
+                        A fun and interactive math game designed to improve arithmetic skills
+                        through engaging challenges, instant feedback and a responsive user interface.
+                    </p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">HTML</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">JavaScript</span>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex gap-3 mt-7">
+                    <a href="https://meow.srcnexus.app/math-game" target="_blank" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold hover:text-indigo-600 transition">
+                        Live Demo ↗
+                    </a>
+                    
+                    <a href="#" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold opacity-70">
+                        Source Code
+                    </a>
+                </div>
+                
+            </div>
+            
+            
+            
+            <!-- Project 4 -->
+            <div class="group neu-card p-6 rounded-[28px] hover:scale-[1.03] transition-all duration-500 flex flex-col justify-between overflow-hidden">
+                
+                <div>
+                    <!-- Project Image -->
+                    <div class="relative overflow-hidden rounded-2xl mb-5">
+                        <img src="./assets/images/project-4.jpg" alt="Modern Calculator" loading="lazy" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Project Number -->
+                        <span class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-indigo-600">
+                            04
+                        </span>
+                    </div>
+                    
+                    <!-- Category -->
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-500">
+                        Web Application
+                    </span>
+                    
+                    <!-- Title -->
+                    <h4 class="mt-3 text-2xl font-black">
+                        Modern Calculator
+                    </h4>
+                    
+                    <!-- Description -->
+                    <p class="mt-3 text-sm text-gray-500 leading-7">
+                        A sleek and responsive calculator featuring a modern interface,
+                        smooth interactions and accurate real-time calculations for everyday use.
+                    </p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">HTML</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold">JavaScript</span>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex gap-3 mt-7">
+                    <a href="https://meow.srcnexus.app/Calculator-" target="_blank" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold hover:text-indigo-600 transition">
+                        Live Demo ↗
+                    </a>
+                    
+                    <a href="#" class="neu-btn flex-1 py-3 rounded-xl text-center font-semibold opacity-70">
+                        Source Code
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="reveal relative py-16 sm:py-20 lg:py-24 overflow-hidden px-4">
+        
+        <!-- Floating Dots -->
+        <span class="absolute top-10 left-10 w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        <span class="absolute top-24 right-20 w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+        <span class="absolute bottom-16 left-16 w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        <span class="absolute bottom-10 right-12 w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+        
+        <!-- Heading -->
+        <div class="text-center mb-14">
+            
+            <span class="text-indigo-600 font-semibold uppercase tracking-[0.25em] text-sm">
+                Contact
+            </span>
+            
+            <h2 class="mt-3 text-4xl sm:text-5xl font-black">
+                Let's Connect & Create
+            </h2>
+            
+            <div class="w-16 h-1 bg-indigo-600 rounded-full mx-auto mt-5"></div>
+            
+            
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto leading-8">
+                Available for freelance projects, internships, and collaborations.
+            </p>
+            
+        </div>
+        
+        <!-- Main Card -->
+        <div class="max-w-5xl mx-auto neu-card rounded-[32px] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+            
+            <!-- Top & Bottom Accent -->
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Side -->
+                <div>
+                    
+                    <h3 class="text-3xl font-black mb-4">
+                        Get In Touch
+                    </h3>
+                    
+                    <p class="text-gray-500 leading-8 mb-8">
+                        I'm always interested in exciting frontend projects,
+                        freelance opportunities and creative collaborations.
+                        Let's build something awesome together.
+                    </p>
+                    
+                    <div class="space-y-5">
+                        
+                        <!-- Availability -->
+                        <div class="neu-card rounded-2xl p-4 flex items-center gap-4">
+                            
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                
+                                <i data-lucide="briefcase" class="w-6 h-6 text-indigo-600"></i>
+                                
+                            </div>
+                            
+                            <div>
+                                
+                                <p class="text-xs uppercase tracking-wider text-gray-400">
+                                    Availability
+                                </p>
+                                
+                                <p class="font-semibold">
+                                    Open for Projects & Collaborations
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="neu-card rounded-2xl p-4 flex items-center gap-4">
+                            
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                
+                                <i data-lucide="map-pin" class="w-6 h-6 text-indigo-600"></i>
+                                
+                            </div>
+                            
+                            <div>
+                                
+                                <p class="text-xs uppercase tracking-wider text-gray-400">
+                                    Location
+                                </p>
+                                
+                                <p class="font-semibold">
+                                    Dewas, India
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <!-- Right Side Starts -->
+                <div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        
+                        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-brands fa-github text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                GitHub
+                            </p>
+                            
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/krish-parmar-b90457400" target="_blank" rel="noopener noreferrer" class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-brands fa-linkedin text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                LinkedIn
+                            </p>
+                            
+                        </a>
+                        
+                        <a href="https://www.instagram.com/YOUR_USERNAME/" target="_blank" class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-brands fa-instagram text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                Instagram
+                            </p>
+                            
+                        </a>
+                        
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/917224044931?text=Hi%20Krish,%20I%20visited%20your%20portfolio" target="_blank" class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-brands fa-whatsapp text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                WhatsApp
+                            </p>
+                            
+                        </a>
+                        
+                        <!-- View Resume -->
+                        <a href="./assets/resume/Krish_Parmar_Modern_Resume.pdf" target="_blank" class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-solid fa-file-lines text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                View Resume
+                            </p>
+                            
+                        </a>
+                        
+                        <a href="mailto:mystery4020@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Krish,%20I%20visited%20your%20portfolio." class="neu-btn rounded-2xl p-5 text-center hover:scale-105 transition-all duration-300">
+                        
+                            <i class="fa-solid fa-envelope text-3xl text-indigo-600"></i>
+                            
+                            <p class="mt-3 font-semibold">
+                                Email
+                            </p>
+                            
+                        </a>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-gray-300/20">
+        
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            
+            <!-- Decorative Top Line -->
+            <div class="flex items-center justify-center mb-12">
+                
+                <div class="h-[2px] w-20 bg-gradient-to-r from-transparent to-indigo-600"></div>
+                
+                <div class="w-3 h-3 rounded-full bg-indigo-600 shadow-[0_0_12px_rgba(79,70,229,0.6)] mx-4"></div>
+                
+                <div class="h-[2px] w-20 bg-gradient-to-l from-transparent to-indigo-600"></div>
+                
+            </div>
+            
+            <!-- Top -->
+            <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+                
+                <!-- Brand -->
+                <div class="max-w-sm text-center lg:text-left">
+                    
+                    <h2 class="text-3xl font-black">
+                        KRISH
+                    </h2>
+                    
+                    <p class="mt-4 text-gray-500 leading-7">
+                        Frontend Developer passionate about building modern,
+                        responsive and interactive web experiences with clean UI
+                        and smooth user interactions.
+                    </p>
+                    
+                </div>
+                
+                <!-- Navigation -->
+                <div class="text-center">
+                    
+                    <h3 class="font-bold text-lg mb-5">
+                        Quick Links
+                    </h3>
+                    
+                    <nav class="flex flex-wrap justify-center gap-6 font-medium">
+                        
+                        <a href="#home" class="hover:text-indigo-600 transition">
+                            Home
+                        </a>
+                        
+                        <a href="#experience" class="hover:text-indigo-600 transition">
+                            Journey
+                        </a>
+                        
+                        <a href="#projects" class="hover:text-indigo-600 transition">
+                            Projects
+                        </a>
+                        
+                        <a href="#contact" class="hover:text-indigo-600 transition">
+                            Contact
+                        </a>
+                        
+                    </nav>
+                    
+                </div>
+                
+                <!-- Back To Top -->
+                <div class="text-center">
+                    
+                    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="neu-btn px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+                    
+                        ↑ Back to Top
+                        
+                    </button>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Fancy Divider -->
+            <div class="flex items-center justify-center my-10">
+                
+                <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+                
+            </div>
+            
+            <!-- Bottom -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                
+                <p class="text-center md:text-left">
+                    © 2026 KRISH. All Rights Reserved.
+                </p>
+                
+                <p class="text-center">
+                    Designed & Developed with
+                    <span class="text-red-500">♥</span>
+                    by
+                    <span class="text-indigo-600 font-black">
+                        KRISH
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
